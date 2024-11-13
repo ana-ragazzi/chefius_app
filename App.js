@@ -8,6 +8,7 @@ import Config from "./src/components/screens/Config/Config.jsx";
 import Health from "./src/components/screens/Health/Health.jsx";
 import PrefAcompanhamento from "./src/components/screens/PrefAcompanhamento/PrefAcompanhamento.jsx";
 import { PrefProvider } from "./src/components/hooks/usePref.jsx";
+import Restaurantes from "./src/components/screens/Restaurantes/Restaurantes.jsx";
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +31,7 @@ export default function App() {
             }}
           >
             <Stack.Screen name="Chat" component={Chat} />
+            <Stack.Screen name="Restaurantes" component={Restaurantes} />
             <Stack.Screen name="PrefAcompanhamento" component={PrefAcompanhamento} />
             <Stack.Screen name="Receitas" component={Receitas} />
             <Stack.Screen name="Health" component={Health} />

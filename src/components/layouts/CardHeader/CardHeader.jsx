@@ -3,7 +3,7 @@ import yoga from '../../../assets/imgs/yogaguru.png';
 import styles from './CardHeader.module';
 import { useNavigation } from '@react-navigation/native';
 
-const CardHeader = ({titulo, subtitulo, minititulo}) => {
+const CardHeader = ({titulo, subtitulo, minititulo, imagem}) => {
     const navigation = useNavigation();
 
     return (
@@ -13,7 +13,7 @@ const CardHeader = ({titulo, subtitulo, minititulo}) => {
                 <Text style={styles.subtitle}>{subtitulo}</Text>
                 <Text style={styles.miniTitle}>{minititulo}</Text>
             </View>
-            <Image style={styles.image} source={yoga} resizeMode="contain" />
+            <Image style={styles.image} source={imagem} resizeMode="contain" />
         </View>
 
     );

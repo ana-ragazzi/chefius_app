@@ -1,14 +1,15 @@
 import { View, Text, SafeAreaView, ScrollView, Image } from 'react-native';
 import CardHeader from '../../layouts/CardHeader/CardHeader';
 import HealthScroll from '../../layouts/HealthScroll/HealthScroll';
-import HealthCard from "../../layouts/HealthCard/HealtCard";
-import styles from './Health.module'
-import Restaurante from '../../../assets/imgs/restaurantes.png'
-import Nutri from '../../../assets/imgs/gurulaptop.png'
-
-
+import HealthCard from "../../layouts/HealthCard/HealthCard";
+import styles from './Health.module';
+import Restaurante from '../../../assets/imgs/restaurantes.png';
+import Nutri from '../../../assets/imgs/gurulaptop.png';
+import yoga from '../../../assets/imgs/yogaguru.png';
 
 const Health = () => {
+
+
     return (
         <ScrollView vertical showsVerticalScrollIndicator={false}
             style={styles.messageContainer}
@@ -20,6 +21,7 @@ const Health = () => {
                     titulo="Saúde e bem estar"
                     subtitulo="Aqui você encontrará sugestões de artigos, restaurantes e nutricionistas."
                     minititulo="Sugestões abaixo"
+                    imagem={yoga}
                 />
                 <HealthScroll scrollTitulo="Artigos" />
                 <View style={styles.containerRest}>
@@ -29,6 +31,7 @@ const Health = () => {
                             titulo='Restaurantes'
                             subtitulo="Ver mais"
                             imagem={Restaurante}
+                            tela='Restaurantes'
                         />
                         <HealthCard 
                             titulo='Nutricionistas'

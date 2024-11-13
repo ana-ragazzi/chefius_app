@@ -10,7 +10,8 @@ const initialPrefs = {
     prot: { active: true, value: 60, color: 'rgba(2, 16, 54, 0.6)' },
     lipd: { active: true, value: 40, color: 'rgba(101, 198, 148, 0.6)' },
     agua: { active: true, value: 30, color: 'rgba(175, 21, 63, 0.6)' },
-    fibr: { active: true, value: 50, color: 'rgba(175, 21, 63, 0.6)' }
+    fibr: { active: true, value: 50, color: 'rgba(255, 144, 26, 0.6)'}
+        
 };
 
 const PrefProvider = ({ children }) => {

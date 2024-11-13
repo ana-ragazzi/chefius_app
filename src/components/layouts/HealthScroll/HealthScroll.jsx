@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { View, Text, TouchableOpacity, ScrollView, Animated } from "react-native";
 import styles from './HealthScroll.module';
-import HealthCard from "../HealthCard/HealtCard";
+import HealthCard from "../HealthCard/HealthCard";
 import Bowl from '../../../assets/imgs/bowl.png'
 import Boy from '../../../assets/imgs/boy.png'
 import Brain from '../../../assets/imgs/mente.png'
