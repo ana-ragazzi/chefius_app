@@ -16,15 +16,19 @@ export default styles = StyleSheet.create({
         overflow: 'hidden',  
     },
     image: {
-        width: 140,  
+        width: '30%',  
         height: 140, 
-        marginLeft: 15,  
+        marginLeft: 0,  
 
     },
     textContainer: {
-        maxWidth: 200,
+        alignSelf: 'flex-start',
+        maxWidth: '70%',
         padding: 20,
         flexDirection: 'column',
+        height: '100%',
+        justifyContent: 'space-between',
+        maxHeight: 180
     },
     title: {
         fontSize: 25,

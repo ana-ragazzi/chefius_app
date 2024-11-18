@@ -1,14 +1,32 @@
 import { useNavigation } from "@react-navigation/native";
-import { StyleSheet, Text, View, Image, TouchableOpacity, StatusBar } from "react-native";
+import { useFonts, Montserrat_400Regular, Montserrat_700Bold, Montserrat_600SemiBold } from "@expo-google-fonts/montserrat"
+import { Pacifico_400Regular } from "@expo-google-fonts/pacifico"
+import { StyleSheet, Text, View, Image, TouchableOpacity, StatusBar, ActivityIndicator } from "react-native";
 import colors from "../../../assets/colors";
 import chapeu from "../../../assets/imgs/chapeu_menu.png";
 import guruBemVindo from "../../../assets/imgs/guru_bemvindo.png";
 import { LinearGradient } from "expo-linear-gradient";
-import { fonts } from "../../../assets/fonts";
 import * as Animatable from "react-native-animatable";
 
+
+import { fonts } from "../../../assets/fonts"; 
+
 export default function Initial() {
-  const navigation = useNavigation();  // Usando React Navigation
+  const navigation = useNavigation();  
+
+  const [fontsLoaded] = useFonts({
+    Montserrat_400Regular,
+    Montserrat_700Bold,
+    Pacifico_400Regular,
+    Montserrat_600SemiBold,
+   })
+   if(!fontsLoaded){
+    return null
+   }
+  
+  if (!fontsLoaded) {
+    return <ActivityIndicator size="large" color="#0000ff" />; // Exibe um indicador enquanto as fontes carregam
+  }
 
   return (
     <Animatable.View style={{ flex: 1 }}>
@@ -57,12 +75,12 @@ const styles = StyleSheet.create({
     width: 200,
     fontSize: 42,
     color: colors.rosa,
-    fontFamily: fonts.Pacifico,
+    fontFamily: fonts.Pacifico, // Fonte carregada
     textAlign: 'center',
   },
 
   subtitulo: {
-    fontFamily: fonts.Bold,
+    fontFamily: fonts.Bold, // Fonte carregada
     fontSize: 24,
     color: colors.laranja,
   },
@@ -70,7 +88,7 @@ const styles = StyleSheet.create({
   texto: {
     width: 300,
     fontSize: 18,
-    fontFamily: fonts.Regular,
+    fontFamily: fonts.Regular, // Fonte carregada
     textAlign: 'center',
   },
 
@@ -85,7 +103,7 @@ const styles = StyleSheet.create({
 
   btnCadastroText: {
     fontSize: 18,
-    fontFamily: fonts.Regular,
+    fontFamily: fonts.Regular, // Fonte carregada
     color: colors.branco,
   },
 
@@ -102,7 +120,7 @@ const styles = StyleSheet.create({
 
   btnLoginText: {
     fontSize: 18,
-    fontFamily: fonts.Regular,
+    fontFamily: fonts.Regular, 
     color: colors.rosa,
   },
 });

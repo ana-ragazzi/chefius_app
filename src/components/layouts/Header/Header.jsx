@@ -7,9 +7,11 @@ import Icon from 'react-native-vector-icons/Entypo';
 import IconArt from 'react-native-vector-icons/AntDesign';
 import { useNavigation, useNavigationState } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useAuth } from "../../hooks/useAuth";
 
 const Header = ({ user }) => {
     const [modalVisible, setModalVisible] = useState(false);
+    const { auth, logout } = useAuth();
     const navigation = useNavigation();
 
     const currentRouteIndex = useNavigationState((state) => {
@@ -63,7 +65,7 @@ const Header = ({ user }) => {
                         (
                             <>
                                 <Image style={styles.perfilImage} source={chefhat} />
-                                <Text style={styles.perfilUserText}>Olá, {user}</Text>
+                                <Text style={styles.perfilUserText}>Olá, {auth.nome}</Text>
                             </>
                         ) : (
                             <>

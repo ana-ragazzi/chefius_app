@@ -1,8 +1,9 @@
-import styles from './Restaurantes.module'
+import styles from './Nutri.module'
 import {View, Text, ScrollView} from 'react-native';
 import CardHeader from '../../layouts/CardHeader/CardHeader';
 import Restaurantestela from '../../../assets/imgs/restaurantestela.png';
-import Mamma from '../../../assets/imgs/mamma.png';
+import Nutri from '../../../assets/imgs/nutri2.png';
+import Ju from '../../../assets/imgs/ju.png';
 import Card from '../../layouts/CardNutrieRest/Card';
 
 
@@ -15,16 +16,16 @@ const Restaurantes = () => {
         >
             <>
                 <CardHeader
-                    titulo="Restaurantes"
-                    subtitulo="Nós separamos uma lista de restaurantes da sua região que pode te interessar com base nas suas receitas favoritas."
+                    titulo="Nutricionistas"
+                    subtitulo="Aqui está uma lista com todos nossos nutricionistas parceiros."
                     minititulo="Sugestões abaixo"
-                    imagem={Restaurantestela}
+                    imagem={Nutri}
                 />
 
                 <Card
-                    titulo='Mamma Jamma'
-                    imagem={Mamma}
-                    texto='$$$'
+                    titulo='Juliana Maia'
+                    imagem={Ju}
+                    texto='(19) 99123-4566'
                 />
 
             </>

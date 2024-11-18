@@ -37,6 +37,8 @@ const Health = () => {
                             titulo='Nutricionistas'
                             subtitulo="Ver mais"
                             imagem={Nutri}
+                            tela='Nutricionistas'
+
                         />                     
                     </View>
                 </View>

@@ -31,8 +31,8 @@ const Menu = () => {
                 <Material name="chef-hat" color={isCurrentRoute('Chat') ? '#af153f' : '#000'} size={25}/>
                 <Text>Guru</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.group} onPress={() => navigation.navigate('Config')}>
-                <Faether name="user" color={isCurrentRoute('Config') ? '#af153f' : '#000'} size={25}/>
+            <TouchableOpacity style={styles.group} onPress={() => navigation.navigate('Perfil')}>
+                <Faether name="user" color={isCurrentRoute('Perfil') ? '#af153f' : '#000'} size={25}/>
                 <Text>Perfil</Text>
             </TouchableOpacity>
         </View>
